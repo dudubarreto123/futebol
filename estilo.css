@@ -1,0 +1,68 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+main h1{
+     text-align: center; /*alinhar o texto no centro*/
+     font-family:Georgia, 'Times New Roman', Times, serif;
+     font-size: 40px;
+}
+.wrapper{
+    height: 100vh;
+    overflow-x:hidden;
+    perspective: 4px;
+    transform-style: preserve-3d;
+}
+.secao {
+    margin: 100px;
+    position: relative;
+    height: 80vh;
+    min-height: 100px;
+    transform-style: inherit;
+    padding-bottom: 100px;
+}
+
+.secao::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom: 0;
+    z-index: -10;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: translatez(-1px) scale(1.5);
+}
+.conteudo {
+    position:absolute;
+    top:70%;
+    width: 80%;
+    padding: 20px 10px;
+    background-color: rgba(199, 190, 199, 0);
+    color: rgb(236, 237, 241);
+    font-size: 22px;
+    text-align:justify;
+    left: 50%;
+    transform: translate(-50%);
+    box-shadow: 3px 3px 3px #808080;
+    opacity: 85%;
+}
+.fundo1{
+    margin-bottom: 400px;
+}
+.fundo2 .conteudo{position:absolute;
+    top:70%
+}
+.fundo2 .conteudo{background-color: rgb(223, 223, 231);
+    color: rgb(158, 22, 22);
+}
+.fundo1::before{
+ background-image: url(img/fut.jpg);
+}
+.fundo2::before{
+    background-image: url(/Paralaxe/Img/slk.jpg);
+}
+
